@@ -137,7 +137,9 @@ import UniformTypeIdentifiers
                                 savePanel.beginSheetModal(for: NSApplication.shared.keyWindow!) { result in
                                     if result == .OK, let url = savePanel.url {
                                         do {
-                                            try FileManager.default.removeItem(atPath: url.path)
+                                            if FileManager.default.fileExists(atPath: url.path) {
+                                                try FileManager.default.removeItem(atPath: url.path)
+                                            }
                                             try FileManager.default.copyItem(at: outputImageURL, to: url)
                                         } catch {
                                             DispatchQueue.main.async {
