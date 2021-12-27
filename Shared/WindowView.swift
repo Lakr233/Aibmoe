@@ -44,7 +44,7 @@ import UniformTypeIdentifiers
                 return false
             }
 
-            _ = (provider.copy() as! NSItemProvider).loadObject(ofClass: URL.self) { url, _ in
+            _ = provider.loadObject(ofClass: URL.self) { url, _ in
                 if let url = url, let image = NSImage(contentsOf: url) {
                     DispatchQueue.main.async {
                         self.image = image
@@ -136,16 +136,14 @@ import UniformTypeIdentifiers
                                 savePanel.nameFieldStringValue = "magic.png"
                                 savePanel.beginSheetModal(for: NSApplication.shared.keyWindow!) { result in
                                     if result == .OK, let url = savePanel.url {
-                                        try? FileManager.default.removeItem(atPath: url.path)
                                         do {
+                                            try FileManager.default.removeItem(atPath: url.path)
                                             try FileManager.default.copyItem(at: outputImageURL, to: url)
                                         } catch {
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                let alert = NSAlert(error: error)
-                                                alert.beginSheetModal(
-                                                    for: NSApplication.shared.keyWindow!,
-                                                    completionHandler: nil
-                                                )
+                                            DispatchQueue.main.async {
+                                                showProgressBar = false
+                                                self.error = AnyError.anyError(error)
+                                                showAlert = true
                                             }
                                         }
                                     }
