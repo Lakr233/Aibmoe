@@ -7,26 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA0DA2A277988620039E5DD /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0DA29277988620039E5DD /* AnyError.swift */; };
+		0FA0DA2B277988620039E5DD /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0DA29277988620039E5DD /* AnyError.swift */; };
 		500413C12776FE7F00EF24BD /* AibmoeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413B12776FE7E00EF24BD /* AibmoeApp.swift */; };
 		500413C22776FE7F00EF24BD /* AibmoeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413B12776FE7E00EF24BD /* AibmoeApp.swift */; };
 		500413C32776FE7F00EF24BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413B22776FE7E00EF24BD /* ContentView.swift */; };
 		500413C42776FE7F00EF24BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413B22776FE7E00EF24BD /* ContentView.swift */; };
 		500413C52776FE7F00EF24BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500413B32776FE7F00EF24BD /* Assets.xcassets */; };
 		500413C62776FE7F00EF24BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500413B32776FE7F00EF24BD /* Assets.xcassets */; };
-		500413D32776FF3C00EF24BD /* windowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413D22776FF3C00EF24BD /* windowView.swift */; };
-		500413D42776FF3C00EF24BD /* windowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413D22776FF3C00EF24BD /* windowView.swift */; };
+		500413D32776FF3C00EF24BD /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413D22776FF3C00EF24BD /* WindowView.swift */; };
+		500413D42776FF3C00EF24BD /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500413D22776FF3C00EF24BD /* WindowView.swift */; };
 		500413D7277706F000EF24BD /* SwiftAmbiguousPNGPacker in Frameworks */ = {isa = PBXBuildFile; productRef = 500413D6277706F000EF24BD /* SwiftAmbiguousPNGPacker */; };
 		500413DA277706FC00EF24BD /* SwiftAmbiguousPNGPacker in Frameworks */ = {isa = PBXBuildFile; productRef = 500413D9277706FC00EF24BD /* SwiftAmbiguousPNGPacker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA0DA29277988620039E5DD /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
 		500413B12776FE7E00EF24BD /* AibmoeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AibmoeApp.swift; sourceTree = "<group>"; };
 		500413B22776FE7E00EF24BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		500413B32776FE7F00EF24BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		500413B82776FE7F00EF24BD /* Aibmoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aibmoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500413BE2776FE7F00EF24BD /* Aibmoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aibmoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500413C02776FE7F00EF24BD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		500413D22776FF3C00EF24BD /* windowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = windowView.swift; sourceTree = "<group>"; };
+		500413D22776FF3C00EF24BD /* WindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				500413B12776FE7E00EF24BD /* AibmoeApp.swift */,
+				0FA0DA29277988620039E5DD /* AnyError.swift */,
 				500413B22776FE7E00EF24BD /* ContentView.swift */,
-				500413D22776FF3C00EF24BD /* windowView.swift */,
+				500413D22776FF3C00EF24BD /* WindowView.swift */,
 				500413B32776FE7F00EF24BD /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -202,8 +206,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				500413C32776FE7F00EF24BD /* ContentView.swift in Sources */,
-				500413D32776FF3C00EF24BD /* windowView.swift in Sources */,
+				500413D32776FF3C00EF24BD /* WindowView.swift in Sources */,
 				500413C12776FE7F00EF24BD /* AibmoeApp.swift in Sources */,
+				0FA0DA2A277988620039E5DD /* AnyError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				500413C42776FE7F00EF24BD /* ContentView.swift in Sources */,
-				500413D42776FF3C00EF24BD /* windowView.swift in Sources */,
+				500413D42776FF3C00EF24BD /* WindowView.swift in Sources */,
 				500413C22776FE7F00EF24BD /* AibmoeApp.swift in Sources */,
+				0FA0DA2B277988620039E5DD /* AnyError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
