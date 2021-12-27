@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        #if os(macOS)
-        windowView()
-        #else
-        mobileView()
-        #endif
+#if os(macOS)
+        WindowView()
+#else
+        MobileView()
+#endif
     }
 }
 
